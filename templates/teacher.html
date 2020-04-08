@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>www.virtualclasses.com</title>
+    <script>
+      function reloadPage(){
+      location.reload(true);
+      }
+
+    </script>
+  </head>
+  <body>
+  <br>
+  <div class="container">
+  <h1 class="mr-5">Welcome ,Teacher </h1>
+
+      </br>
+      <div>
+      you, can configure your Token here!!!
+      <form class="" action="/logout" >
+          <button style="width:300px;" class="btn btn-dark mt-4" type="submit">
+               Logout
+           </button>
+      </form></div>
+      <hr>
+    <strong>NOTE: Please do not reload the page again and again...</strong></br>
+<div>
+    <form action="/teacher_token" method="post">
+ <textarea style=" width : 800px; height : 200px;" id="myInput" >{{token}} </textarea></div>
+      <p class="mt-3">Please select the time validity for token.</p>
+       {{ form.hidden_tag()}}
+    {{ form.example }}
+    <div class="mt-3">
+      <button type="submit" class="btn btn-primary mr-2" onclick="reloadPage();">Generate Token</button>
+    <button class="btn btn-success "  onclick="myFunction();" type="button">Copy token</button>
+
+</form>
+    </div>
+       <a href="/vidyoconnector">
+           <button style="width:300px;" class="btn btn-danger mt-4" type="button">
+               Go Live & Join via browser
+           </button>
+       </a>
+
+      <a href="/gettoken"><button style="width:300px;" class="btn btn-warning mt-4 ml-3" type="submit">
+               Publish token
+           </button></a>
+
+          </div>
+<script>
+
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert(" Token is copied");
+
+}
+function clear() {
+  console.log("in the clear function");
+  var getText = document.getElementById("myInput");
+  getText.value=null;
+}
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>
