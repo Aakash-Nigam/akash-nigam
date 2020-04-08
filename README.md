@@ -1,5 +1,13 @@
-$ pip install -r requirements.txt
-# Run local server
-$ python main.py
 
 
+
+
+Installing
+----------
+
+Install and update using `pip`_:
+
+.. code-block:: text
+
+    pip install -r requirements.txt
+    python main.py
